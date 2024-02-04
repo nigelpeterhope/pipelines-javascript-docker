@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nigelpeterhopepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nigelpeterhopepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: nigelpeterhopepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: nigelpeterhopepipelinesjavascriptdocker 
+          image: nnhcontainerregistry.azurecr.io/nigelpeterhopepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
